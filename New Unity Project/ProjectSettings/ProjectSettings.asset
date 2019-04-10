@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 693d62cdc299e4bafac565f3d11c7592
+  productGUID: 5982f20cd62e9434ebce2be49b2896f6
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: New Unity Project
+  productName: Flocking
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -611,10 +611,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 01d3a2e4-01e4-4d3b-a787-6ae0f33f0c70
+  cloudProjectId: bb698bcb-9072-4174-80bf-2100e8df4347
   framebufferDepthMemorylessMode: 0
-  projectName: New Unity Project (1)
-  organizationId: unity_6iwemktlbqc2oa
+  projectName: Flocking
+  organizationId: jenjenjenjen
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
