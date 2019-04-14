@@ -35,7 +35,7 @@ public class PressurePad : MonoBehaviour
   void OnTriggerEnter(Collider other)
   {
     doorint = (doorint - 1);
-    if (doorint == 0 && broken == false) {
+    if (doorint == 0 && broken == false ) {
       Invoke("explode", 1);
       broken = true;
       }
