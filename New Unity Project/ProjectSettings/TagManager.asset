@@ -7,6 +7,8 @@ TagManager:
   - Boid
   - Test
   - Keys
+  - SavePoint
+  - Kill
   layers:
   - Default
   - TransparentFX
