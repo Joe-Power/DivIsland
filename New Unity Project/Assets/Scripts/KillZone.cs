@@ -14,9 +14,10 @@ public class KillZone : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
     }
 
+    // Checks if the falling object is the player
+    // If it is not, destroy object to reduce unnecessary lag
     void OnTriggerEnter(Collider collider)
     {
       if (collider.gameObject != player){

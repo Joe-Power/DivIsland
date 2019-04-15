@@ -34,6 +34,7 @@ public class WeightDetection : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+      // Get the mass value from the colliding object
       rb = other.GetComponent<Rigidbody>();
       mass = rb.mass;
 
@@ -41,13 +42,13 @@ public class WeightDetection : MonoBehaviour
       // Change the number here to change the mass the bridge breaks on
       if (rb.mass >= 2 && triggered == false) {
         triggered = true;
-        // Run the break script and reset the bridge
+        // Run the break script and reset the bridge after an interval
         Invoke("explode", 0.1f);
         Invoke("reset", 3);
         }
     }
 
-    // rebuilds the bridge
+    // Rebuilds the bridge
     void reset(){
       bridge.SetActive(true);
       triggered = false;

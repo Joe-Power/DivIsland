@@ -5,7 +5,8 @@ using UnityEngine;
 public class PressurePad : MonoBehaviour
 {
   public GameObject door;
-  public static int doorint;
+  public int doorint;
+  // Can add more ints for multiple sets of pressure pads
   private bool broken;
 
   //Integrating the Break script
@@ -21,17 +22,21 @@ public class PressurePad : MonoBehaviour
   public float explosionUpward = 0.4f;
   public float removeDelay = 3f;
 
+  // Initialize values, set doorint to however many pressure pads there are
   void Start ()
   {
     door = GameObject.FindWithTag("Test");
     doorint = 1;
     broken = false;
+
     // From the Break script
     // gameObject.AddComponent<Rigidbody>();
     cubesPivotDistance = cubeSize * cubesInRow / 2;
     cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
   }
 
+  // On something coming into contact with the pressure pads reduces count by 1
+  // Breaks the door when target goal is reached
   void OnTriggerEnter(Collider other)
   {
     doorint = (doorint - 1);
@@ -39,13 +44,13 @@ public class PressurePad : MonoBehaviour
       Invoke("explode", 1);
       broken = true;
       }
-    Debug.Log (doorint);
+    //Debug.Log (doorint);
   }
 
+  // Raises count if there's nothing on the plate anymore 
   void OnTriggerExit(Collider other)
   {
     doorint = (doorint + 1);
-    Debug.Log (doorint);
   }
 
   // From the Break script
