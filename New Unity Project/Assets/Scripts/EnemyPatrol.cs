@@ -24,7 +24,7 @@ public class EnemyPatrol : MonoBehaviour
 
 
     private NavMeshAgent agent;
-    //private NavMeshController controller;
+    private NavMeshController controller;
 
     // Array of patrol points
     public Transform[] PatrolPoints;

@@ -25,7 +25,7 @@ public class EnemyRepel : MonoBehaviour
 
    // Values to access NavMesh
    private NavMeshAgent agent;
-   //private NavMeshController controller;
+   private NavMeshController controller;
 
     private GameObject player;
 
