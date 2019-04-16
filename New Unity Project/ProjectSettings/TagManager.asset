@@ -9,6 +9,11 @@ TagManager:
   - Keys
   - SavePoint
   - Kill
+  - Projectile
+  - PatrolPoints
+  - pickupable
+  - Ground
+  - ActivePlayer
   layers:
   - Default
   - TransparentFX

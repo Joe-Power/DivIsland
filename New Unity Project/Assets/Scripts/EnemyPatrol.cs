@@ -75,8 +75,8 @@ public class EnemyPatrol : MonoBehaviour
 
     void Update() {
 
-        Debug.Log("pathpending : " + agent.pathPending);
-Debug.Log("path status: " + agent.pathStatus);
+        //Debug.Log("pathpending : " + agent.pathPending);
+        //Debug.Log("path status: " + agent.pathStatus);
 
 
         //print(currentPatrolPoint);
