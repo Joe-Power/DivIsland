@@ -107,11 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 6059204206134719666}
   watcherTransform: {fileID: 7394952170881347301}
-  x: 0
-  y: 0
-  z: 0
-  translatePos: 0
-  applyOppisiteForce: 0
   force: 2
 --- !u!54 &6059204206134719666
 Rigidbody:
