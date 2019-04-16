@@ -157,6 +157,7 @@ public class BoidController : MonoBehaviour
         if (Input.GetKeyDown("h") && isDivided == false)
         {
             watcher.transform.localScale = new Vector3(charScaleX - sizeDifference, charScaleY - sizeDifference, charScaleZ - sizeDifference);
+            watcherRb.mass = 0.5f;
             isDivided = true;
             SpawnBoids();
 
@@ -165,6 +166,7 @@ public class BoidController : MonoBehaviour
         if (Input.GetKeyDown("j") && isDivided)
         {
             watcher.transform.localScale = new Vector3(charScaleX + sizeDifference, charScaleY + sizeDifference, charScaleZ + sizeDifference);
+            watcherRb.mass = 1f;
             isDivided = false;
             KillBoids();
         }
