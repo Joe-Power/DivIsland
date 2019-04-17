@@ -43,6 +43,7 @@ public class NavMeshController : MonoBehaviour
 
     public  void NavMeshProvider(Vector3 destination)
     {
+        agent = this.GetComponent<NavMeshAgent>();
         //agent.velocity = rigidb.velocity;
 
         agent.SetDestination(destination);

@@ -34,7 +34,7 @@ public class Become : MonoBehaviour
         actionThrow = GetComponent<Throw>();
 
         // set the current object to ActivePlayer
-        gameObject.transform.parent.tag = "ActivePlayer";
+        gameObject.transform.tag = "ActivePlayer";
 
         //setting the audio sound component
         setAudioSource();
@@ -68,7 +68,7 @@ public class Become : MonoBehaviour
 
         RigidBodyController controller = GetComponentInParent<RigidBodyController>();
 
-        controller.Locomote(new Vector3(horizontal, 0, vertical));
+        controller.Locomote(new Vector3(horizontal, 0f, vertical));
         controller.Rotate();
 
 
