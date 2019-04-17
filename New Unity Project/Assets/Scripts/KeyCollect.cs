@@ -8,23 +8,25 @@ public class KeyCollect : MonoBehaviour
   public float speed = 10f;
   private int collectedkeys;
 
+  // initializes number of keys collected to 0
   void Start ()
   {
     collectedkeys = 0;
   }
-
+  
+  // Key spins in place
    void Update ()
    {
      transform.Rotate(Vector3.up, speed * Time.deltaTime);
    }
 
+  // On collision, destroys the key and adds it to the total key count
   void OnTriggerEnter(Collider other)
   {
     Destroy(thisKey);
-    Debug.Log (collectedkeys);
     collectedkeys = (collectedkeys + 1);
     if (collectedkeys == 3) {
-      //unlock whatever
+      //unlock whatever at whatever number
       }
   }
 }
