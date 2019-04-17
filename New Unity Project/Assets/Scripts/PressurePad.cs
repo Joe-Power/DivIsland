@@ -8,6 +8,7 @@ public class PressurePad : MonoBehaviour
   public int doorint;
   // Can add more ints for multiple sets of pressure pads
   private bool broken;
+  private bool pressed;
 
   //Integrating the Break script
   public float cubeSize = 0.05f;
@@ -28,6 +29,7 @@ public class PressurePad : MonoBehaviour
     door = GameObject.FindWithTag("Test");
     doorint = 1;
     broken = false;
+    pressed = false;
 
     // From the Break script
     // gameObject.AddComponent<Rigidbody>();
@@ -39,7 +41,10 @@ public class PressurePad : MonoBehaviour
   // Breaks the door when target goal is reached
   void OnTriggerEnter(Collider other)
   {
+    pressed = true;
+    if (pressed == true){
     doorint = (doorint - 1);
+  }
     if (doorint == 0 && broken == false ) {
       Invoke("explode", 1);
       broken = true;
@@ -47,10 +52,11 @@ public class PressurePad : MonoBehaviour
     //Debug.Log (doorint);
   }
 
-  // Raises count if there's nothing on the plate anymore 
+  // Raises count if there's nothing on the plate anymore
   void OnTriggerExit(Collider other)
   {
     doorint = (doorint + 1);
+    pressed = false;
   }
 
   // From the Break script
