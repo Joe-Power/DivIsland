@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6059204206134719666}
   m_Layer: 0
   m_Name: Watcher
-  m_TagString: Untagged
+  m_TagString: ActivePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

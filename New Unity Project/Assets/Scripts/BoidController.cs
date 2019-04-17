@@ -13,6 +13,8 @@ public class BoidController : MonoBehaviour
     private GameObject inGameBoid;
     List<GameObject> boidList = new List<GameObject>();
 
+    public static int glueCounter;
+
     public GameObject watcher;
     public Rigidbody watcherRb;
     public float maxSpeed;
@@ -28,7 +30,7 @@ public class BoidController : MonoBehaviour
 
     public float sizeDifference;
 
-    private bool isDivided;
+    public bool isDivided;
 
 
     public Vector3 averageBoidPos;
@@ -45,7 +47,6 @@ public class BoidController : MonoBehaviour
 
     void Start()
     {
-
         isDivided = false;
         BoidWatcher boidWatcher = watcher.GetComponent<BoidWatcher>();
         watcherRb = watcher.GetComponent<Rigidbody>();
@@ -129,6 +130,9 @@ public class BoidController : MonoBehaviour
 
     void Update()
     {
+
+
+
         Vector3 alignment = Vector3.zero;
         Vector3 cohesion = Vector3.zero;
         Vector3 seperation = Vector3.zero;
