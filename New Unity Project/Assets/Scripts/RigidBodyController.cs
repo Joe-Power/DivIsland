@@ -28,7 +28,7 @@ public class RigidBodyController : MonoBehaviour
         direction.y = 0;
 
         direction = direction.normalized;
-      
+
         direction.z *= speed * Time.deltaTime;
         direction.x *= speed * Time.deltaTime;
 
@@ -47,16 +47,16 @@ public class RigidBodyController : MonoBehaviour
         }
         characterBod.transform.rotation = Quaternion.Euler(0, rotateYAxis, 0);
 
-        Become cam = GameObject.Find("Camera_Become").GetComponent<Become>();
-
-        if (cam.GetCamMode() == 1)
-        {
-            cam.gameObject.transform.rotation = Quaternion.Euler(rotateXAxis, rotateYAxis, 0);
-        }
-        else
-        {
-            cam.gameObject.transform.rotation = Quaternion.Euler(33+ rotateXAxis, rotateYAxis, 0);
-        }
+        // Become cam = GameObject.Find("Camera_Become").GetComponent<Become>();
+        //
+        // if (cam.GetCamMode() == 1)
+        // {
+        //     cam.gameObject.transform.rotation = Quaternion.Euler(rotateXAxis, rotateYAxis, 0);
+        // }
+        // else
+        // {
+        //     cam.gameObject.transform.rotation = Quaternion.Euler(33+ rotateXAxis, rotateYAxis, 0);
+        // }
     }
     public void Jump()
     {
@@ -65,7 +65,7 @@ public class RigidBodyController : MonoBehaviour
             characterBod.AddForce(new Vector3(0, 2, 0) * jumpSpeed, ForceMode.Impulse);
             isGrounded = false;
         }
-       
+
     }
     void OnCollisionEnter(Collision col)
     {
