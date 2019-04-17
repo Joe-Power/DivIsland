@@ -6,6 +6,7 @@ public class KeyCollect : MonoBehaviour
 {
   public GameObject thisKey;
   public GameObject obstacle;
+  public GameObject obstacle2;
   public float speed = 10f;
   private int collectedkeys;
 
@@ -30,5 +31,8 @@ public class KeyCollect : MonoBehaviour
     if (collectedkeys == 3) {
       Destroy(obstacle);
       }
+    if (collectedkeys == 5) {
+      Destroy(obstacle2);
+        }
   }
 }

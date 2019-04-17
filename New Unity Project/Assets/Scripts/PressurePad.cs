@@ -44,7 +44,6 @@ public class PressurePad : MonoBehaviour
       Invoke("explode", 1);
       broken = true;
       }
-    //Debug.Log (doorint);
   }
 
   // Raises count if there's nothing on the plate anymore
