@@ -26,7 +26,7 @@ public class PressurePad : MonoBehaviour
   void Start ()
   {
     door = GameObject.FindWithTag("Test");
-    doorint = 1;
+    doorint = 2;
     broken = false;
 
     // From the Break script
@@ -47,7 +47,7 @@ public class PressurePad : MonoBehaviour
     //Debug.Log (doorint);
   }
 
-  // Raises count if there's nothing on the plate anymore 
+  // Raises count if there's nothing on the plate anymore
   void OnTriggerExit(Collider other)
   {
     doorint = (doorint + 1);

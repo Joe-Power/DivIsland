@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyCollect : MonoBehaviour
 {
   public GameObject thisKey;
+  public GameObject obstacle;
   public float speed = 10f;
   private int collectedkeys;
 
@@ -13,7 +14,7 @@ public class KeyCollect : MonoBehaviour
   {
     collectedkeys = 0;
   }
-  
+
   // Key spins in place
    void Update ()
    {
@@ -25,8 +26,9 @@ public class KeyCollect : MonoBehaviour
   {
     Destroy(thisKey);
     collectedkeys = (collectedkeys + 1);
+    Debug.Log(collectedkeys);
     if (collectedkeys == 3) {
-      //unlock whatever at whatever number
+      Destroy(obstacle);
       }
   }
 }
