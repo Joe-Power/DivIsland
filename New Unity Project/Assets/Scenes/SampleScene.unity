@@ -97,7 +97,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -105,7 +105,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 1
@@ -222,8 +222,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60122728}
+  - component: {fileID: 60122729}
   m_Layer: 0
-  m_Name: Patrol Points
+  m_Name: Patrol Points Spawner2
   m_TagString: PatrolPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60122727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -0.5, z: 0.8}
+  m_LocalPosition: {x: -5.7, y: -0.39, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2109057562}
@@ -252,6 +253,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &60122729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60122727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c3dc4ab91144146a7be1046fcea8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject:
+  - {fileID: 944668018}
+  objectScale: 1
+  particleEffect: {fileID: 0}
+  particleEffectEnable: 0
+  soundEffect: {fileID: 0}
+  soundVolume: 1
+  maxSpawn: 1
+  spawnerIntervalEnable: 1
+  spawnerInterval: 3
+  zForceThrust: 200
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.110124744, y: 0.040122602, z: -0.017606774, w: 0.9929516}
-  m_LocalPosition: {x: -40.1, y: 6.1, z: -24.9}
+  m_LocalPosition: {x: 14.2, y: 6.1, z: -14.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1048,8 +1072,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654375490}
+  - component: {fileID: 654375491}
   m_Layer: 0
-  m_Name: Patrol Points (5)
+  m_Name: Patrol Points Spawner
   m_TagString: PatrolPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1063,12 +1088,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654375489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.7, y: 0, z: 12.3}
+  m_LocalPosition: {x: -24.7, y: -3.11, z: 12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 60122728}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654375491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654375489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c3dc4ab91144146a7be1046fcea8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject:
+  - {fileID: 944668018}
+  objectScale: 1
+  particleEffect: {fileID: 0}
+  particleEffectEnable: 0
+  soundEffect: {fileID: 0}
+  soundVolume: 1
+  maxSpawn: 1
+  spawnerIntervalEnable: 1
+  spawnerInterval: 3
+  zForceThrust: 200
 --- !u!1 &707355818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 453c6367d60d8f1469fdee01f01b7c25,
@@ -1323,13 +1371,12 @@ GameObject:
   - component: {fileID: 944365906}
   - component: {fileID: 947757426}
   - component: {fileID: 946660274}
-  - component: {fileID: 944668020}
-  - component: {fileID: 944668019}
-  - component: {fileID: 944668021}
   - component: {fileID: 944668022}
   - component: {fileID: 944668023}
   - component: {fileID: 944668025}
   - component: {fileID: 944668024}
+  - component: {fileID: 944668020}
+  - component: {fileID: 944668019}
   m_Layer: 0
   m_Name: horse
   m_TagString: Untagged
@@ -1344,12 +1391,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944668018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895fdae9278eae14ebde00632075e00b, type: 3}
+  m_Script: {fileID: 11500000, guid: 827d77f11980b4b438d34502064bd21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Range: 2
+  DistanceDetect: 3
 --- !u!195 &944668020
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1359,7 +1406,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 944668018}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.04008107
+  m_Radius: 0.040081087
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1368,23 +1415,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.032936234
+  m_Height: 0.032936245
   m_BaseOffset: 0.025
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &944668021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944668018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827d77f11980b4b438d34502064bd21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DistanceDetect: 3
 --- !u!114 &944668022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,8 +2383,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2139305372}
+  - component: {fileID: 2139305373}
   m_Layer: 0
-  m_Name: Patrol Points (1)
+  m_Name: Patrol Points Spawner1
   m_TagString: PatrolPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2364,12 +2399,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139305371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.3, y: 0, z: -25.8}
+  m_LocalPosition: {x: -16.88, y: 1.17, z: -24.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 60122728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139305373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139305371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c3dc4ab91144146a7be1046fcea8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject:
+  - {fileID: 944668018}
+  objectScale: 1
+  particleEffect: {fileID: 0}
+  particleEffectEnable: 0
+  soundEffect: {fileID: 0}
+  soundVolume: 1
+  maxSpawn: 1
+  spawnerIntervalEnable: 1
+  spawnerInterval: 3
+  zForceThrust: 200
 --- !u!1 &2144266651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2568,7 @@ PrefabInstance:
     - target: {fileID: 7394952170881347301, guid: bdacaf37b7856df4cbd81666a0064926,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.5
+      value: 15.799999
       objectReference: {fileID: 0}
     - target: {fileID: 7394952170881347301, guid: bdacaf37b7856df4cbd81666a0064926,
         type: 3}
@@ -2520,7 +2578,7 @@ PrefabInstance:
     - target: {fileID: 7394952170881347301, guid: bdacaf37b7856df4cbd81666a0064926,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7394952170881347301, guid: bdacaf37b7856df4cbd81666a0064926,
         type: 3}
