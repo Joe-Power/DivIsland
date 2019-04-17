@@ -32,7 +32,7 @@ public class WeightDetection : MonoBehaviour
       cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
       // Get the mass value from the colliding object
       rb = other.GetComponent<Rigidbody>();
@@ -40,7 +40,7 @@ public class WeightDetection : MonoBehaviour
 
       //Debug.Log (rb.mass);
       // Change the number here to change the mass the bridge breaks on
-      if (rb.mass >= 1 && triggered == false) {
+      if (rb.mass < 1 && triggered == false) {
         triggered = true;
         // Run the break script and reset the bridge after an interval
         Invoke("explode", 0.1f);
