@@ -6,7 +6,7 @@ public class GlueController : MonoBehaviour
 {
 
     public GameObject glue;
-    public GameObject glueData;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class GlueController : MonoBehaviour
     {
         if (other.gameObject.tag == "ActivePlayer")
         { 
-            glueData.GetComponent<GlueCounter>().AddGlue();
+       
             Destroy(glue);
         }
     }

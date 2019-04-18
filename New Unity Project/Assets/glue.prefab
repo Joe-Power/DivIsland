@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 9164372894559786824}
   - component: {fileID: 2749622650757247640}
   - component: {fileID: 1012287932727630611}
-  - component: {fileID: 5464631024538174664}
+  - component: {fileID: 7591254865256544304}
   m_Layer: 0
   m_Name: default
   m_TagString: Glue
@@ -124,7 +124,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 1b430906815314d41bb9fb6d7e56971d, type: 3}
---- !u!114 &5464631024538174664
+--- !u!114 &7591254865256544304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,4 +137,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glue: {fileID: 8545560624755400714}
-  glueData: {fileID: 551294585249227359, guid: 58eaea4ee953d46af8e26d1d34b70343, type: 3}
