@@ -41,6 +41,8 @@ public class BoidController : MonoBehaviour
 
     public float distance;
 
+    private static int glueAmount;
+
 
 
     void Start()
@@ -129,6 +131,8 @@ public class BoidController : MonoBehaviour
 
     void Update()
     {
+        glueAmount = BoidWatcher.glueCounter;
+
         Vector3 alignment = Vector3.zero;
         Vector3 cohesion = Vector3.zero;
         Vector3 seperation = Vector3.zero;
@@ -163,7 +167,7 @@ public class BoidController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown("j") && isDivided)
+        if (Input.GetKeyDown("j") && isDivided && glueAmount > 0)
         {
             watcher.transform.localScale = new Vector3(charScaleX + sizeDifference, charScaleY + sizeDifference, charScaleZ + sizeDifference);
             watcherRb.mass = 0.5f;
