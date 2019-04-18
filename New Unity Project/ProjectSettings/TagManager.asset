@@ -14,6 +14,8 @@ TagManager:
   - pickupable
   - Ground
   - ActivePlayer
+  - Glue
+  - Horse
   layers:
   - Default
   - TransparentFX
