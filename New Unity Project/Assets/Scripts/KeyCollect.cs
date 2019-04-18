@@ -28,10 +28,10 @@ public class KeyCollect : MonoBehaviour
     Destroy(thisKey);
     collectedkeys = (collectedkeys + 1);
     Debug.Log(collectedkeys);
-    if (collectedkeys >= 3) {
+    if (collectedkeys == 3) {
       Destroy(obstacle);
       }
-    if (collectedkeys >= 5) {
+    if (collectedkeys == 5) {
       Destroy(obstacle2);
         }
   }
