@@ -16,6 +16,7 @@ TagManager:
   - ActivePlayer
   - Glue
   - Horse
+  - Gate
   layers:
   - Default
   - TransparentFX

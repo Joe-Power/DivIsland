@@ -10,8 +10,11 @@ public class BoidWatcher : MonoBehaviour
     public Rigidbody rigidBody;
     public Transform watcherTransform;
     private TextMeshProUGUI glueCountTextArea;
+    private TextMeshProUGUI keyCountTextArea;
 
-    public GameObject uiCanvas;
+    public GameObject gate;
+    public GameObject glueUICanvas;
+    public GameObject keyUICanvas;
     public GameObject glue;
     public static int glueCounter;
     public int keyCounter;
@@ -22,7 +25,9 @@ public class BoidWatcher : MonoBehaviour
 
     void Start()
     {
-        glueCountTextArea = uiCanvas.GetComponent<TextMeshProUGUI>();  
+        glueCountTextArea = glueUICanvas.GetComponent<TextMeshProUGUI>();
+        keyCountTextArea = keyUICanvas.GetComponent<TextMeshProUGUI>();
+
         glueCounter = 0;
         keyCounter = 0;
         UpdateUI();
@@ -35,11 +40,25 @@ public class BoidWatcher : MonoBehaviour
             glueCounter = glueCounter + 1;
             UpdateUI();      
         }
+
+        if (other.gameObject.tag == "Keys")
+        {
+            keyCounter = keyCounter + 1;
+            UpdateUI();
+        }
+
+        if (other.gameObject.tag == "Gate" && keyCounter >= 3)
+        {
+            gate.SetActive(false);
+
+
+        }
     }
 
     void UpdateUI()
     {
         glueCountTextArea.SetText("Glue : {0}", glueCounter);
+        keyCountTextArea.SetText("Keys : {0}", keyCounter);
 
 
     }
