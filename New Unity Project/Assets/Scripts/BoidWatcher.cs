@@ -12,7 +12,7 @@ public class BoidWatcher : MonoBehaviour
     private TextMeshProUGUI glueCountTextArea;
     private TextMeshProUGUI keyCountTextArea;
 
-    public GameObject gate;
+    
     public GameObject glueUICanvas;
     public GameObject keyUICanvas;
     public GameObject glue;
@@ -47,12 +47,7 @@ public class BoidWatcher : MonoBehaviour
             UpdateUI();
         }
 
-        if (other.gameObject.tag == "Gate" && keyCounter >= 3)
-        {
-            gate.SetActive(false);
-
-
-        }
+      
     }
 
     void UpdateUI()
